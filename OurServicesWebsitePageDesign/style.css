@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body /*최상위 루트*/
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #3f3752;
+}
+
+.containter
+{
+    position: relative;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  
+}
+
+.containter .serviceBox 
+{
+    position: relative;
+    width: 350px;
+    height: 280px;
+    background: #51446e;
+    border-radius: 20px;
+    overflow:hidden;
+}
+
+.containter .serviceBox .icon 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: var(--i);
+    transition: 0.5s; /*default는 어떤걸로 설정되어 있는거지?*/
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.containter .serviceBox:hover .icon 
+{
+    top: 30px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition-delay: 0s;
+}
+
+.containter .serviceBox .icon ion-icon 
+{
+    font-size: 5em;
+    color:#fff;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+
+.containter .serviceBox:hover .icon ion-icon
+{
+    font-size: 2em;
+    transition-delay: 0s;
+} 
+
+.containter .serviceBox .content 
+{
+    position: relative;
+    padding: 20px;
+    color:#fff;
+    text-align: center;
+    margin-top: 100px;
+    z-index:1;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.containter .serviceBox:hover .content
+{
+    transform: scale(1);
+}
+
+.containter .serviceBox .content h2
+{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.containter .serviceBox .content p
+{
+    font-weight: 300;
+    line-height: 1.5em;
+}
