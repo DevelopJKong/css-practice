@@ -35,7 +35,7 @@
         <img src="./file/name.png" class="movieTitle" alt="name.png" />
         <h4>
           <span>2020</span>
-          <span>12+</span>
+          <span><i>12+</i></span>
           <span>1h 55min</span>
           <span>Action</span>
         </h4>
@@ -48,10 +48,16 @@
             <a href="#"><i class="fa fa-plus"></i>My List</a>
         </div>
       </div>
+      <a class="play" onclick="toggleVideo();"><img src="./file/play.png" />Watch Trailer</a>
+    </div>
+    <div class="trailer">
+      <video src="./file/video.mp4" controls="true" autoplay="true"></video>
+      <img class="close" src="./file/close.png" onclick="toggleVideo();"/>
     </div>
   </body>
   <script
     src="https://kit.fontawesome.com/520a1f1065.js"
     crossorigin="anonymous"
   ></script>
+  <script src="./app.js"></script>
 </html>
